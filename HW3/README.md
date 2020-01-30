@@ -45,3 +45,6 @@ The images are also under the "Images in Bucket" folder provided in the repo.
 
 It was quite interesting setting up each of the components in the pipeline.  It was a bit difficult to understand the entire process all at once, so my mindset was to approach each task component by component.  I first focused on the Jetson, and subsequently, I worked on the two components in the cloud.  Debugging was also quite tedious, for there many moving parts to this pipeline.  Overall, it was a great project, and I apologize for the poor camera resolution!
 
+
+
+Each of the folders consists of both the Dockerfile used to build the container, as well as the shell script to execute the build and/or run the container. Moreover, the python files are included where applicable. The topic that is used is called facedetection, and the url for the object storage is here: https://w251-bucket-sayan.s3.us-south.cloud-object-storage.appdomain.cloud
