@@ -5,11 +5,11 @@ MQTT_HOST="169.61.184.60"
 MQTT_PORT=1883
 MQTT_TOPIC="facedetection"
 
-def on_connect(client, userdata, flags, rc):
+def onConnect(client, userdata, flags, rc):
     print("Connected With Result Code " (rc))
 
 
-def on_message(client, userdata, msg):
+def onMessage(client, userdata, msg):
     print("on message received")
     num = random.randint(1,10000)
 
@@ -20,8 +20,8 @@ def on_message(client, userdata, msg):
 
 
 mqttclient = mqtt.Client()
-mqttclient.on_connect = on_connect
-mqttclient.on_message = on_message
+mqttclient.onConnect = onConnect
+mqttclient.onMessage = onMessage
 
 mqttclient.connect(MQTT_HOST,MQTT_PORT,60)
 mqttclient.subscribe(MQTT_TOPIC, qos=1)

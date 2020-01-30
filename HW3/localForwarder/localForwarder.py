@@ -12,7 +12,7 @@ def onConnectCloud(client, userdata, flags, rc):
 
 def onMessage(client, userdata, msg):
     print("on message received!")
-    cloudmqttclient.publish("detector",payload=msg.payload,qos=1,retain=False)
+    cloudmqttclient.publish("facedetection",payload=msg.payload,qos=1,retain=False)
 
 cloudmqttclient = mqtt.Client()
 cloudmqttclient.connect("169.61.184.60",1883,60)

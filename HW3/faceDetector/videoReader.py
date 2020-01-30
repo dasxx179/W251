@@ -7,7 +7,7 @@ LOCAL_MQTT_PORT=1883
 LOCAL_MQTT_TOPIC="hw03"
 
 def onConnect(client, userdata, flags, rc):
-    print("Connected with result code {0}".format(str(rc))) 
+    print("Connected with result code {0}".format(str(rc)))
 
 mqttclient=mqtt.Client()
 mqttclient.onConnect = onConnect
@@ -26,10 +26,10 @@ while(True):
     for (x,y,w,h) in faces:
         face = frame[y:y+h,x:x+w]
         print("face detected ",face.shape,face.dtype)
-        rc,jpg = cv.imencode(".png",fce)
+        rc,jpg = cv.imencode(".png",face)
         msg = jpg.tobytes()
         mqttclient.publish(LOCAL_MQTT_TOPIC,payload=msg,qos=1,retain=False)
-    
+
 # When everything is done, release the capture
 video_capture.release()
 cv.destroyAllWindows()
