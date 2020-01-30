@@ -12,4 +12,4 @@ docker network create --driver bridge hw03
 
 This network was also created in the cloud with the same command.  
 
-Each of the folders consists of both the Dockerfile used to build the container, as well as the shell script to execute the build and/or run the container. Moreover, the python files are included where applicable. The topic that is used is called facedetection.
+Each of the folders consists of both the Dockerfile used to build the container, as well as the shell script to execute the build and/or run the container. Moreover, the python files are included where applicable. The topic that is used is called facedetection, and the url for the object storage is here: https://w251-bucket-sayan.s3.us-south.cloud-object-storage.appdomain.cloud
