@@ -1,0 +1,18 @@
+Name all the layers in the network, make sure you understand what they do.
+Answer: 
+Input Layer: It defines what goes into the network
+Conv: A layer comprised of filters that convolves over the image through dot products.  
+Relu: Activation Layer
+Pool: Two common methods are average and max that summarize the average/most activated presence of a feature.
+Experiment with the number and size of filters in each layer. Does it improve the accuracy?
+Answer: Yes for the most part because changing the conv filters size from 8 and 16 to 128 and 256 increased the accuracy to .97 - 1 whereas before it was .95 - 1 at the same training size.
+Remove the pooling layers. Does it impact the accuracy?
+Answer: The accuracy fluctuates more in between .9-.99. It is quite volatile and takes more time to stabilize.  
+Add one more conv layer. Does it help with accuracy?
+Answer: 
+layers_defs.push({type:'conv', sx:5, filters:8, stride:1, pad:2, activation:'relu});
+Adding the layer seemed to marginally help.  It is hard to tell with all the fluctuations, but intuitively it should improve the accuracy.  It is between .93 - .97
+Increase the batch size. What impact does it have?
+Answer: It is similar to the previous output of .93 - .97
+What is the best accuracy you can achieve? Are you over 99%? 99.5%?
+It is possible to hit 99%, and I can see it hit 1 occasionally but unable to go over 99.5%,
