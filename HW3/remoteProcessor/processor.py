@@ -13,7 +13,7 @@ def on_message(client, userdata, msg):
     print("on message received")
     num = random.randint(1,10000)
 
-    path = '/mnt/w251sayan/firstDirectory/HW03' + str(num) +'.png'
+    path = '/mnt/w251-bucket-sayan' + str(num) +'.png'
     imagefile = open(path, 'wb')
     imagefile.write(msg.payload)
     imagefile.close()
