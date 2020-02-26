@@ -1,8 +1,8 @@
 1. Describe your solution in detail. What neural network did you use? What dataset was it trained on? What accuracy does it achieve?
-I modeled my solution based on the hint provided in Homework 7.  The SSD model for face detection is found here: https://github.com/yeephycho/tensorflow-face-detection.  I used OpenCV to connect to the camera and get images that way.  The max score of the output is used to determine the coordinates of the box, and then this prediction is displayed again.  
+I modeled my solution based on the hint provided in Homework 7.  The SSD model for face detection is found here: https://github.com/yeephycho/tensorflow-face-detection.  I used OpenCV to connect to the camera and get images that way.  The max score of the output is used to determine the coordinates of the box, and then this prediction is displayed again.  It achieves an accuracy of .95 max and low as .53.
 2. Does it achieve reasonable accuracy in your empirical tests? Would you use this solution to develop a robust, production-grade system?
-The accuracy is not that good  It achieves about .5 - .52, and I would not use this solution for a robust, production-grade system.  
+The accuracy is not that good  It achieves about .53 - .95 but I need to be stationary, and I would not use this solution for a robust, production-grade system.  
 3. What framerate does this method achieve on the Jetson? Where is the bottleneck?
-On the Jetson, this method achieves a frame rate of 6.5 frame per second.  
+On the Jetson, this method achieves a frame rate of 6.5 frame per second.  The bottleneck is the inference step.    
 4. Which is a better quality detector: the OpenCV or yours?
 OpenCV is a better quality detector than the one I implemented. 
