@@ -1,0 +1,29 @@
+Part 1:
+1. In the time allowed, how many images did you annotate?
+I annotated 51 images.
+2. Home many instances of the Millennium Falcon did you annotate? How many TIE Fighters?
+I annoted 45 images of Millennium Falcon and 37 images of TIE Fighters.
+3. Based on this experience, how would you handle the annotation of large image data set?
+I would automate what I currently am doing for a larger set with some sort of unsupervised learning method.
+4. Think about image augmentation? How would augmentations such as flip, rotation, scale, cropping, and translation effect the annotations?
+It would diversify the image set and provide much more information.
+Part 2:
+Describe the following augmentations in your own words
+1. Flip
+Mirrors the image around its axis running through the center
+2. Rotation
+Turns the image around a point
+3. Scale
+Make smaller or bigger
+4. Crop
+Cut out pieces of image
+5. Translation
+Move the image horizontally or vertically
+6. Noise
+Random variation that may impede information about the image
+Part 3:
+1. Image annotations require the coordinates of the objects and their classes; in your option, what is needed for an audio annotation?
+Decibel information and frequency information
+Time of transmission (time of initial tranmission and final transmission)
+Medium sound is going through
+
