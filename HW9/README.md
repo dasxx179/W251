@@ -34,6 +34,8 @@ To train the actual network, the command used was: `nohup mpirun --allow-run-as-
 
 6. Take a look at the plot of the learning rate and then check the config file. Can you explan this setting?
 
+   ![GPU](Photos/learning_rate.png)
+
    The learning rate has a steep slope in the beginning and ramps up and reaches a peak before ultimately settling down in a smooth descending curve afterwards.  I believe this is because initially, the model is extremely untrained and does not understand the training data.  So, it needs to rapidly learn and understand all the unfamiliar data.  However, afterwards, we would want it to slow down so it has time to make correct predictions after its rapid learning.  
 
 7. How big was your training set (mb)? How many training lines did it contain?
